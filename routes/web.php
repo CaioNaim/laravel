@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('servicos/{nome}/{cpf}/{rg}/{CEP}', function ($nome,$cpf,$rg,$CEP) {
+    return ('nome: '.$nome.'\n cpf: '.$cpf.' \n RG: '.$rg.' \n CEP: '.$CEP);
+});
+
+Route::put('/atualizarProduto/{id}','MinhaController@atualizarProduto');
